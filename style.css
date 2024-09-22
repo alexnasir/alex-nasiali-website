@@ -5,7 +5,7 @@
   box-sizing: 10px;
 }
 html{
-    scroll-behavior: smooth;
+    scroll-behavior: inherit;
 }
 body {
   background: #000;
@@ -111,6 +111,10 @@ about-col-1 img {
 .tab-links.active-link::after{
     width: 50%;
 }
+.skills{
+  padding: 15px;
+}
+
 .contact-left{
     flex-basis: 15%;
 }
