@@ -2,18 +2,57 @@
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
-  box-sizing: 10px;
+  box-sizing: border-box;
 }
 html{
-    scroll-behavior: inherit;
+    scroll-behavior: smooth;
 }
 body {
   background: #000;
   color: #ffff;
+  flex-wrap: wrap;
+  flex: 50%;
+
+}
+.search-container {
+  display: flex;
+  align-items: center; /* Center the items vertically */
+}
+
+.search-container input[type="text"] {
+  padding: 10px;
+  margin-left: 10px; /* Space between the nav and search */
+  border: 1px solid #ccc; /* Border styling */
+  border-radius: 5px; /* Rounded corners */
+  width: 200px; /* Set a width for the search input */
+}
+
+.search-container button {
+  padding: 10px 15px; /* Button padding */
+  margin-left: 20px; /* Space between the input and button */
+  background-color: aqua; /* Button color */
+  color: rgb(19, 51, 141); /* Text color */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+.search-container button:hover {
+  background-color: chartreuse;
+}
+/* Marquee text styling */
+.marquee-text {
+  color: #ff004f; 
+  font-size: 30px; 
+  font-weight: 600px; 
+  padding: 10px; 
+}
+.marquee-text:hover {
+  color: aqua;
 }
 #header {
   width: 50%;
-  height: 100vh;
+  height: 50%;
   text-decoration: none;
   background-size: cover;
   background-position: left;
@@ -63,6 +102,10 @@ nav ul li a:hover::after {
 .header-text h1 span {
   color: red;
 }
+.header-text h1 span:hover {
+  color: aqua;
+}
+
 #about {
   padding: 20px 0;
   color: #ababab;
@@ -172,4 +215,61 @@ form input,form textarea{
 }
 .copyright e{
     color: aqua;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-item-left {
+  flex: 50%;
+}
+
+.flex-item-right {
+  flex: 50%;
+}
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+/* @media (max-width: 800px) {
+  .flex-item-right, .flex-item-left {
+    flex: 100%;
+  }
+} */
+
+@media (max-width: 768px) {
+  .row {
+      flex-direction: column; /* Stack columns */
+  }
+
+  .about-col-1,
+  .about-col-2,
+  .skills,
+  .contact-left,
+  .contact-right {
+      width: 100%; /* Full width on small devices */
+  }
+
+  header {
+      text-align: center; /* Center text on small devices */
+  }
+
+  h1 {
+      font-size: 1.8em; /* Adjust header size */
+  }
+}
+
+@media (max-width: 480px) {
+  nav img {
+      max-width: 80px; /* Smaller logo for very small screens */
+  }
+
+  h1 {
+      font-size: 1.5em; /* Further reduce header size */
+  }
+
+  form input,
+  form textarea {
+      padding: 8px; /* Adjust padding */
+  }
 }

@@ -1,6 +1,6 @@
 let clickheader = HTMLDListElement.document.getElementById("page-btn")
  
-let clickheader = HTMLDListElement.addEventListener("click",mouseClick())
+let clickBtn = HTMLDListElement.addEventListener("click",mouseClick())
 header.addEventListener("mouseover",click.style.backgroundColor="#fff")
 
 function mouseClick(){
